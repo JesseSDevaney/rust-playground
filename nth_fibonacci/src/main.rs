@@ -24,9 +24,9 @@ fn main() {
     println!("The {choice} fibonacci number is {fibonacci_number}");
 }
 
-fn generate_nth_fibonacci(n: u32) -> u32 {
-    let mut x1: u32 = 0;
-    let mut x2: u32 = 1;
+fn generate_nth_fibonacci(n: u32) -> u64 {
+    let mut x1: u64 = 0;
+    let mut x2: u64 = 1;
 
     for _ in 1..n {
         let temp = x2;
