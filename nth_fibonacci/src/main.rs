@@ -1,12 +1,12 @@
 use std::io;
 
 fn main() {
-    let mut user_input = String::new();
     let choice: u32;
 
     loop {
         println!("Please input the (nth) fibonacci number you want:");
 
+        let mut user_input = String::new();
         io::stdin()
             .read_line(&mut user_input)
             .expect("Failed to read line");
