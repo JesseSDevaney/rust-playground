@@ -1,10 +1,7 @@
 fn main() {
-    {
-        // s is not valid here, it’s not yet declared
-        let s = "hello"; // s is valid from this point forward
+    let s1 = "hello"; // immutable string literal stored on the stack
 
-        println!("{s}");
-
-        // do stuff with s
-    } // this scope is now over, and s is no longer valid
+    let mut s = String::from("hello"); // mutable string stored on the heap (the heap is what allows it to be mutable)
+    s.push_str(", world!"); // push_str() appends a literal to a String
+    println!("{}", s);
 }
