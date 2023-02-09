@@ -19,4 +19,7 @@ fn main() {
         email: String::from("another@example.com"),
         ..user1
     };
+
+    // println!("{}", user1.username); // ! errors b/c it was moved to user2.username and it is heap-only data (no Copy trait)
+    println!("{}", user1.email); // ! does not error bc it was not moved
 }
