@@ -5,11 +5,11 @@ struct Rectangle {
 }
 
 fn main() {
+    let scale = 2;
     let rect1 = Rectangle {
-        width: 30,
+        width: dbg!(30 * scale),
         height: 50,
     };
 
-    println!("rect1 is {:?}", rect1); // * :? inside {} tells rust to print out debugging information
-    println!("rect1 is {:#?}", rect1); // * prettier output for structs
+    dbg!(&rect1);
 }
